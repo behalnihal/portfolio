@@ -18,14 +18,18 @@ export default function Navbar() {
       </div>
 
       {/* Theme  */}
-      <div className="">
+      <div className="flex items-center space-x-4">
         <button
-          className="border p-1 border-neutral-500 rounded-sm hover:text-neutral-400"
+          className="cursor-pointer"
           onClick={() =>
-            theme == "dark" ? setTheme("light") : setTheme("dark")
+            theme === "light" ? setTheme("dark") : setTheme("light")
           }
         >
-          {theme === "dark" ? <FaMoon /> : <FaSun />}
+          {theme === "light" ? (
+            <FaSun className="transition-colors duration-300 hover:text-blue-500" />
+          ) : (
+            <FaMoon className="transition-colors duration-300 hover:text-blue-500" />
+          )}
         </button>
       </div>
     </div>
