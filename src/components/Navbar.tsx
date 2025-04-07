@@ -2,7 +2,7 @@
 
 import { useTheme } from "next-themes";
 import Link from "next/link";
-import { FaMoon, FaSun } from "react-icons/fa";
+import { FaGithub, FaMoon, FaSun } from "react-icons/fa";
 
 export default function Navbar() {
   const { theme, setTheme } = useTheme();
@@ -17,8 +17,15 @@ export default function Navbar() {
         </Link>
       </div>
 
-      {/* Theme  */}
+      {/* Buttons  */}
       <div className="flex items-center space-x-4">
+        <Link
+          href="https://github.com/behalnihal"
+          target="_blank"
+          className=" hover:text-neutral-400"
+        >
+          <FaGithub className="w-5 h-5" />
+        </Link>
         <button
           className="cursor-pointer"
           onClick={() =>
