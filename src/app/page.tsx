@@ -10,9 +10,9 @@ export default function Home() {
     <div className="gap-y-4 flex flex-col justify-center">
       <About />
       <Experience />
+      <Skills />
       <Project />
       <Profiles />
-      <Skills />
       <Contact />
     </div>
   );
