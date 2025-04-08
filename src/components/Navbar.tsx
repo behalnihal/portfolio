@@ -10,7 +10,7 @@ export default function Navbar() {
     <div className="flex h-16 items-center px-4 container mx-auto">
       {/* Logo  */}
       <div className="flex-1">
-        <Link href="/" className="flex items-center">
+        <Link href="/" className="items-center">
           <span className="font-light text-neutral-400 hover:text-neutral-500 dark:hover:text-neutral-300">
             Nihal
           </span>
@@ -18,7 +18,14 @@ export default function Navbar() {
       </div>
 
       {/* Buttons  */}
+
       <div className="flex items-center space-x-4">
+        <Link
+          href="/projects"
+          className="font-light text-neutral-400 hover:text-neutral-500 dark:hover:text-neutral-300"
+        >
+          Projects
+        </Link>
         <Link
           href="https://github.com/behalnihal"
           target="_blank"
