@@ -31,14 +31,14 @@ export default function Footer() {
           target="_blank"
           className=" hover:text-neutral-400"
         >
-          <FaEnvelope />
+          <FaEnvelope className="text-2xl" />
         </Link>
         <Link
           href="https://x.com/behalnihal"
           target="_blank"
           className=" hover:text-neutral-400"
         >
-          <FaXTwitter />
+          <FaXTwitter className="text-2xl" />
         </Link>
 
         <Link
@@ -46,7 +46,7 @@ export default function Footer() {
           target="_blank"
           className=" hover:text-neutral-400"
         >
-          <FaLinkedin />
+          <FaLinkedin className="text-2xl" />
         </Link>
       </div>
     </div>

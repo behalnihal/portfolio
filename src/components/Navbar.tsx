@@ -1,6 +1,7 @@
 "use client";
 
 import { useTheme } from "next-themes";
+import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaMoon, FaSun } from "react-icons/fa";
 
@@ -10,16 +11,24 @@ export default function Navbar() {
     <div className="flex h-16 items-center px-4 container mx-auto">
       {/* Logo  */}
       <div className="flex-1">
-        <Link href="/" className="items-center">
-          <span className="font-light text-neutral-400 hover:text-neutral-500 dark:hover:text-neutral-300">
-            Nihal
-          </span>
-        </Link>
+        <Image
+          src="/logo.svg"
+          alt="logo"
+          height={30}
+          width={30}
+          className="dark:filter dark:invert"
+        />
       </div>
 
       {/* Buttons  */}
 
       <div className="flex items-center space-x-4">
+        <Link
+          href="/"
+          className="font-light text-neutral-400 hover:text-neutral-500 dark:hover:text-neutral-300"
+        >
+          Home
+        </Link>
         <Link
           href="/projects"
           className="font-light text-neutral-400 hover:text-neutral-500 dark:hover:text-neutral-300"
