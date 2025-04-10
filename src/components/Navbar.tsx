@@ -8,9 +8,16 @@ import { FaGithub, FaMoon, FaSun } from "react-icons/fa";
 export default function Navbar() {
   const { theme, setTheme } = useTheme();
   return (
-    <div className="flex h-16 items-center px-4 container mx-auto">
+    <header className="flex h-16 items-center px-4 container mx-auto">
+      <div
+        className="absolute top-0 left-0 w-full h-[200px] rotate-[180deg] -z-10"
+        style={{
+          maskImage: "linear-gradient(transparent, black 85%)",
+          backgroundColor: "#c05d5d65",
+        }}
+      />
       {/* Logo  */}
-      <div className="flex-1">
+      <div className="flex-1 z-10">
         <Image
           src="/logo.svg"
           alt="logo"
@@ -22,16 +29,16 @@ export default function Navbar() {
 
       {/* Buttons  */}
 
-      <div className="flex items-center space-x-4">
+      <div className="flex items-center space-x-4 z-10">
         <Link
           href="/"
-          className="font-light text-neutral-400 hover:text-neutral-500 dark:hover:text-neutral-300"
+          className="font-light text-neutral-500 hover:text-neutral-500 dark:hover:text-neutral-300"
         >
           Home
         </Link>
         <Link
           href="/projects"
-          className="font-light text-neutral-400 hover:text-neutral-500 dark:hover:text-neutral-300"
+          className="font-light text-neutral-500 hover:text-neutral-500 dark:hover:text-neutral-300"
         >
           Projects
         </Link>
@@ -48,13 +55,13 @@ export default function Navbar() {
             theme === "light" ? setTheme("dark") : setTheme("light")
           }
         >
-          {theme === "light" ? (
-            <FaSun className="transition-colors duration-300 hover:text-blue-500" />
+          {theme === "dark" ? (
+            <FaMoon className="w-5 h-5transition-colors duration-300 hover:text-blue-500" />
           ) : (
-            <FaMoon className="transition-colors duration-300 hover:text-blue-500" />
+            <FaSun className="w-5 h-5 transition-colors duration-300 hover:text-blue-500" />
           )}
         </button>
       </div>
-    </div>
+    </header>
   );
 }
