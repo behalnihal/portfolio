@@ -35,7 +35,7 @@ export default function Project() {
     <Reveal>
       <div className="mb-4 font-light text-neutral-500 dark:text-neutral-300">
         <span className=" px-4 text-2xl font-light ">Projects</span>
-        <div className="mt-3 grid grid-cols-2 gap-4 mx-auto px-4">
+        <div className="mt-3 grid sm:grid-cols-2 gap-4 mx-auto px-4">
           {data.map((project, index) => (
             <ProjectCard
               key={index}
