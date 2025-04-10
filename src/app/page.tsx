@@ -7,7 +7,7 @@ import Skills from "@/components/Skills";
 
 export default function Home() {
   return (
-    <div className="relative gap-y-4 flex flex-col justify-center overflow-x-hidden">
+    <div className="relative gap-y-4 flex flex-col justify-center">
       <About />
       <Experience />
       <Skills />
