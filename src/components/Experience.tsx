@@ -1,27 +1,52 @@
 import { Reveal } from "@/utils/Reveal";
+import Image from "next/image";
 
 const data = [
   {
     company: "Airtel Digital",
     role: "Software Engineer Intern",
     tenure: "July 2024 - Sept 2024",
+    icon: "/airtel-logo.svg",
   },
 ];
+
 export default function Experience() {
   return (
     <Reveal>
-      <div className="px-4 mb-4 font-light text-neutral-500 dark:text-neutral-300">
-        <span className="text-2xl text-neutral-500 dark:text-neutral-300">
+      <div className="px-4 mb-8 font-light">
+        <h2 className="text-2xl font-semibold mb-6 text-neutral-700 dark:text-neutral-200">
           Experience
-        </span>
-        <div className="mt-3">
+        </h2>
+        <div className="grid grid-cols-1 gap-6">
           {data.map((experience, index) => (
-            <div key={index} className="mt-2 mx-4 grid grid-cols-2 gap-2">
-              <p className="font-medium">{experience.company}</p>
-              <span className="text-sm">{experience.tenure}</span>
-              <p className="text-sm text-neutral-500 dark:text-neutral-400">
-                {experience.role}
-              </p>
+            <div
+              key={index}
+              className="p-5 shadow-sm hover:shadow-md transition-all duration-300"
+            >
+              <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+                <div className="w-16 h-16 flex items-center justify-center">
+                  <Image
+                    src={experience.icon}
+                    alt={experience.company}
+                    width={48}
+                    height={48}
+                    className="object-contain"
+                  />
+                </div>
+
+                <div className="flex-1">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                    <h3 className="text-lg font-bold">{experience.company}</h3>
+                    <span className="text-sm text-neutral-500 dark:text-neutral-400 px-3 py-1">
+                      {experience.tenure}
+                    </span>
+                  </div>
+
+                  <p className="text-base font-medium mt-1 text-neutral-600 dark:text-neutral-300">
+                    {experience.role}
+                  </p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
