@@ -56,9 +56,9 @@ export default function Navbar() {
           }
         >
           {theme === "dark" ? (
-            <FaMoon className="w-5 h-5 transition-colors duration-300 hover:text-blue-500" />
-          ) : (
             <FaSun className="w-5 h-5 transition-colors duration-300 hover:text-blue-500" />
+          ) : (
+            <FaMoon className="w-5 h-5 transition-colors duration-300 hover:text-blue-500" />
           )}
         </button>
       </div>
