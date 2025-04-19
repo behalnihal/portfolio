@@ -32,7 +32,7 @@ export default function Profiles() {
     <Reveal>
       <div className="px-4 mb-4 font-light text-neutral-500 dark:text-neutral-300">
         <span className="text-2xl">Coding Profiles</span>
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid sm:grid-cols-2 gap-3">
           {profiles.map((profiles, index) => (
             <div key={index} className="mt-3">
               <ProfileCard {...profiles} />

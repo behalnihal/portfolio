@@ -5,7 +5,7 @@ import { Reveal } from "@/utils/Reveal";
 const projects = () => {
   return (
     <Reveal>
-      <div className="mt-3 grid grid-cols-2 gap-4 mx-auto px-4">
+      <div className="mt-3 grid sm:grid-cols-2 gap-4 mx-auto px-4">
         {data.map((project, index) => (
           <div
             key={index}
