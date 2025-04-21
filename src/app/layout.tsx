@@ -39,6 +39,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className=" max-w-2xl mx-auto py-4 flex flex-col min-h-screen">
             <Navbar />
+            {children}
             <Footer />
             <Analytics />
           </div>
