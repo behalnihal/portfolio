@@ -1,12 +1,11 @@
 "use client";
 
-import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
-import { FaGithub, FaMoon, FaSun } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { ModeToggle } from "./mode-toggle";
 
 export default function Navbar() {
-  const { theme, setTheme } = useTheme();
   return (
     <header className="flex h-16 items-center px-4 container mx-auto">
       <div
@@ -45,22 +44,12 @@ export default function Navbar() {
         <Link
           href="https://github.com/behalnihal"
           target="_blank"
-          className=" hover:text-neutral-400"
+          className="hover:text-neutral-400"
         >
           <FaGithub className="w-5 h-5" />
         </Link>
-        <button
-          className="cursor-pointer"
-          onClick={() =>
-            theme === "light" ? setTheme("dark") : setTheme("light")
-          }
-        >
-          {theme === "dark" ? (
-            <FaSun className="w-5 h-5 transition-colors duration-300 hover:text-blue-500" />
-          ) : (
-            <FaMoon className="w-5 h-5 transition-colors duration-300 hover:text-blue-500" />
-          )}
-        </button>
+
+        <ModeToggle />
       </div>
     </header>
   );

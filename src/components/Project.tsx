@@ -7,7 +7,7 @@ export const data = [
     name: "VibeSync",
     description:
       "A chatting application with real-time messaging and group chats.",
-    tech: ["Nextjs", "ReactJs", "Typescript"],
+    tech: ["Nextjs", "ReactJs", "Javascript", "Socket.io"],
     image: "/vibesync.png",
     repo: "https://github.com/behalnihal/vibesync",
     href: "https://vibesync-you9.onrender.com/",
