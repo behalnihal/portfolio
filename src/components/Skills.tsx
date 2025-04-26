@@ -14,6 +14,7 @@ import {
   FaCss3Alt,
   FaGitAlt,
 } from "react-icons/fa";
+import { IconCloud } from "./IconCloud";
 
 const skills = [
   {
@@ -61,7 +62,7 @@ const skills = [
 export default function Skills() {
   return (
     <Reveal>
-      <div className="mx-4 mb-4 font-light text-neutral-500 dark:text-neutral-300">
+      <div className="flex flex-col sm:flex-row mx-4 mb-4 font-light text-neutral-500 dark:text-neutral-300">
         <span className="text-2xl text-neutral-500 dark:text-neutral-300">
           Skills
         </span>
@@ -83,6 +84,7 @@ export default function Skills() {
             })}
           </div>
         </Marquee>
+        <IconCloud />
       </div>
     </Reveal>
   );
