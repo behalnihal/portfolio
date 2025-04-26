@@ -11,7 +11,7 @@ export const Avatar = () => {
         className="flex h-20 w-20 items-center justify-center rounded-full  p-[2px]"
       />
       <div className="flex flex-col items-start justify-center ml-4">
-        <span className="text-5xl font-bold">Hi, I'm Nihal</span>
+        <span className="text-5xl font-bold">Hi, I&apos;m Nihal</span>
         <span>I mess with code, break stuff, and make it better</span>
       </div>
     </div>
